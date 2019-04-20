@@ -1,7 +1,7 @@
 FROM alpine:3.9
 
 LABEL maintainer "NoEnv"
-LABEL version "1.0.0"
+LABEL version "1.0.1"
 LABEL description "OpenLDAP as Docker Image"
 
 ARG lang="en_US.UTF-8"
@@ -14,7 +14,7 @@ ENV GROUP "$USER"
 ADD openssh-lpk.schema /etc/openldap/schema/openssh-lpk.schema
 ADD entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN apk add --no-cache --purge --clean-protected -u ca-certificates openldap \
-    openldap-clients openldap-back-$backend \
+    openldap-clients openldap-overlay-ppolicy openldap-back-$backend \
  && mkdir /run/openldap \
  && chown $USER.$GROUP /run/openldap \
  && rm -rf /var/cache/apk/*
