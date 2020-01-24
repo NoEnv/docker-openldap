@@ -15,7 +15,7 @@ ENV GROUP "$USER"
 ADD openssh-lpk.schema /etc/openldap/schema/openssh-lpk.schema
 ADD entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN apk add --no-cache --purge --clean-protected -u ca-certificates openldap=$version \
-    openldap-clients openldap-overlay-ppolicy openldap-back-$backend \
+    openldap-clients openldap-overlay-ppolicy openldap-overlay-unique openldap-back-$backend \
  && mkdir /run/openldap \
  && chown $USER.$GROUP /run/openldap \
  && rm -rf /var/cache/apk/*
