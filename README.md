@@ -1,3 +1,5 @@
+[![Docker Pulls](https://badgen.net/docker/pulls/noenv/openldap)](https://hub.docker.com/r/noenv/openldap)
+
 ## docker-openldap
 
 #### Description
