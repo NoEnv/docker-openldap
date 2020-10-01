@@ -22,9 +22,4 @@ RUN apk add --no-cache --purge --clean-protected -u ca-certificates openldap=$ve
 
 EXPOSE 389 636
 
-VOLUME /ssl
-VOLUME /etc/ldap
-VOLUME /var/lib/ldap
-VOLUME /var/restore
-
 ENTRYPOINT [ "entrypoint.sh" ]
