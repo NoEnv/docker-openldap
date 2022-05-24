@@ -1,12 +1,12 @@
-FROM alpine:3.15
+FROM alpine:3.16
 
 LABEL maintainer "NoEnv"
-LABEL version "2.6.0"
+LABEL version "2.6.2"
 LABEL description "OpenLDAP as Docker Image"
 
 ARG lang="en_US.UTF-8"
 ARG backend="mdb"
-ARG version="2.6.0-r0"
+ARG version="2.6.2-r0"
 
 ENV LANG "${lang}"
 ENV USER "ldap"
