@@ -12,7 +12,7 @@ on:
 
 env:
   IMAGE_OWNER: noenv
-  IMAGE_NAME: curl
+  IMAGE_NAME: openldap
   STORAGE_DRIVER: overlay
 
 jobs:
