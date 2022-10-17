@@ -6,7 +6,7 @@ LABEL description "OpenLDAP as Docker Image"
 
 ARG lang="en_US.UTF-8"
 ARG backend="mdb"
-ARG version="2.6.3-r0"
+ARG version="2.6.3-r1"
 
 ENV LANG "${lang}"
 ENV USER "ldap"
